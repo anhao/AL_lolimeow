@@ -7,7 +7,7 @@ Wordpress form [猫可喵][2]
 
 ##### 主题演示
 
-   https://typecho.alapi.cn
+   http://typecho.alapi.cn
 
 
 ### 下载
