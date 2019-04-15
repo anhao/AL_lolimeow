@@ -83,8 +83,8 @@ $this->need('header.php');
 
                             <div class="col-md-4">
                                 <div class="card card-blog">
-                                    <div class="card-header card-header-image"><a
-                                                href="<?php $relatedPosts->permalink(); ?>">
+                                    <div class="card-header card-header-image">
+                                        <a href="<?php $relatedPosts->permalink(); ?>">
                                             <?php if (array_key_exists('thumb', unserialize($this->___fields()))): ?>
                                                 <img class="img img-raised" src="<?php echo $this->fields->thumb; ?>"
                                                      alt="<?php $relatedPosts->title(); ?>">
@@ -96,11 +96,14 @@ $this->need('header.php');
                                                 <?php endif; ?>
                                             <?php endif; ?>
 
-                                        </a></div>
-                                    <div class="card-body"><h4 class="card-title"><a
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title"><a
                                                     href="<?php $relatedPosts->permalink(); ?>"
                                                     title="<?php $relatedPosts->title(); ?>"><?php $relatedPosts->title(); ?></a>
-                                        </h4></div>
+                                        </h4>
+                                    </div>
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -109,6 +112,7 @@ $this->need('header.php');
                 <?php endif; ?>
             </div>
         </div>
+    </div>
 </main>
 
 
