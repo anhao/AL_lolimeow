@@ -86,7 +86,7 @@
 <script src="<?php $this->options->themeUrl('js/theme.js') ?>"></script>
 <?php if($this->is('single')):?>
     <?php if($this->options->fancybox=='yes'):?>
-    <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.staticfile.org/fancybox/3.2.1/jquery.fancybox.min.js"></script>
     <?php endif;?>
 <?php endif ?>
 <?php $this->footer(); ?>
