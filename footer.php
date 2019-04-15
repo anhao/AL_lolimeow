@@ -94,7 +94,7 @@
 if($this->options->pjaxset=='yes'):?>
 <script src="//cdn.staticfile.org/instantclick/3.1.0/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>
-    InstantClick.init();
+    InstantClick.init('mousedown');
 </script>
 <?php endif; ?>
 </body>
