@@ -13,7 +13,7 @@ Wordpress form [猫可喵][2]
 ### 下载
 
 Github:https://github.com/anhao/al_lolimeow  
-CDN下载：待添加
+CDN下载：[点我下载][3]
 
 ### 特点 
  - 基于Bootstrap
@@ -64,3 +64,4 @@ Valine 评论数据是存储在Leancloud的，所以你要使用Valine 需要注
 
 [1]:https://alone88.cn/
 [2]:https://mkm.st
+[3]:http://sqlm.alapi.cn/AL_lolimeow/AL_lolimeow.zip
