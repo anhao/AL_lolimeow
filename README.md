@@ -3,7 +3,11 @@
 
 作者:[Alone88][1]  
 Email:im#alone88.cn (#换成@)  
-Wordpress form [猫可喵][2]
+Wordpress form [猫可喵][2]  
+
+##### 主题演示
+
+   https://typecho.alapi.cn
 
 
 ### 下载
