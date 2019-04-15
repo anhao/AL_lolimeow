@@ -50,8 +50,7 @@
                                     <i class="fa fa-mail-reply-all"></i> <?php $comments->reply(); ?>
                         </span>
                             <span class="comment-author">
-                                <a href="<?php $comments->permalink(); ?>" rel="external nofollow"
-                                   target="_blank"><?php $comments->author(); ?></a>
+                                        <?php $comments->author(); ?>
                                     <?php echo $user;?>
                             </span>
                             <span class="comment-date">
@@ -63,7 +62,7 @@
                             <?php $comments->content(); ?>
                             <?php if ('waiting' == $comments->status) { ?>
                             <em class="awaiting"><?php $options->commentStatus(); ?></em>
-                            <?php } ?></p>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
