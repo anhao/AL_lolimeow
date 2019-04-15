@@ -62,9 +62,9 @@
                         <div class="col-6 collapse-brand">
                             <?php if ($this->options->logoUrl): ?>
                                 <img src="<?php _e($this->options->logoUrl); ?>" alt="<?php _e($this->options->title() );?>" title="<?php _e($this->options->title() );?>"
-                                     class="headerlogo"></a>
+                                     class="headerlogo">
                             <?php else: ?>
-                                <span title="<?php _e($this->options->title()); ?>"><?php _e($this->options->title()); ?></span></a>
+                                <span title="<?php _e($this->options->title()); ?>"><?php _e($this->options->title()); ?></span>
                             <?php endif ?>
                         </div>
                         <div class="col-6 collapse-close">
