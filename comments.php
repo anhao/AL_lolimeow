@@ -58,7 +58,6 @@
                             </span>
                         </div>
                         <div class="comment-content">
-                            <!--/ 首次评论审核提示，在自定义评论代码的适当地方添加以下语句，否则将看不到审核提示语句。-->
                             <?php $comments->content(); ?>
                             <?php if ('waiting' == $comments->status) { ?>
                             <em class="awaiting"><?php $options->commentStatus(); ?></em>
@@ -115,21 +114,17 @@
             <div class="row justify-content-center mb10">
                 <div class="col-md-4"><a id="cancel-comment-reply-link" href="javascript:;"
                                          class="btn btn-sm btn-info" style="display:none;">取消回复</a>
-<!--未完成-->
                 </div>
             </div>
 
             <?php if ($this->user->hasLogin()): ?>
-                <!-- 显示当前登录用户的用户名以及登出连接 -->
                 <!--                <p>--><?php //_e('登录身份: '); ?><!--<a href="--><?php //$this->options->profileUrl(); ?><!--">--><?php //$this->user->screenName(); ?><!--</a>. <a href="--><?php //$this->options->logoutUrl(); ?><!--" title="Logout">--><?php //_e('退出'); ?><!-- &raquo;</a></p>-->
                 <div class="row justify-content-center mb10">
                     <div class="col-md-12" data-no-instant><a href="<?php $this->options->profileUrl(); ?>" class="btn btn-sm btn-info">您已登录:<?php $this->user->screenName(); ?></a>
                         <a href="<?php $this->options->logoutUrl(); ?>" class="btn btn-sm br" title="退出登录">退出
                             &raquo;</a><?php $comments->cancelReply('取消回复'); ?></div>
                 </div>
-                <!-- 若当前用户未登录 -->
             <?php else: ?>
-                <!-- 要求输入名字、邮箱、网址 -->
                 <div class="row" id="comment-author-info">
                     <div class="col-md-4">
                         <div class="form-group">
