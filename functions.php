@@ -5,9 +5,9 @@ function themeConfig($form)
 {
     $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点 LOGO 地址'), _t('在这里填入一个图片 URL 地址, 以在网站标题前加上一个 LOGO'));
     $form->addInput($logoUrl->addRule('xssCheck', _t("请不要在图片链接中使用特殊字符")));
-    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置favicon'));
+    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, 'https://alone88.cn/img/icon-a.png', _t('favicon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置favicon'));
     $form->addInput($favicon->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
-    $iosicon = new Typecho_Widget_Helper_Form_Element_Text('iosicon', NULL, NULL, _t('apple touch icon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置Apple Touch Icon'));
+    $iosicon = new Typecho_Widget_Helper_Form_Element_Text('iosicon', NULL, 'https://alone88.cn/img/icon-a.png', _t('apple touch icon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置Apple Touch Icon'));
     $form->addInput($iosicon->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
     $default_thumb = new Typecho_Widget_Helper_Form_Element_Text('default_thumb', null, null, _t('默认缩略图'), _t('文章的默认缩略图,默认缩略图自动获取文章第一张图片，如果这里不设置，文章页没有图片，则随机显示一张主题里的图片'));
     $form->addInput($default_thumb);
