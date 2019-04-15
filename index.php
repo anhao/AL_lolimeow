@@ -85,7 +85,6 @@ $this->need('header.php'); ?>
                 </div>
             </div>
         </div>
-    </main>
 
         <!-- 分页 -->
         <div class="paging wow swing ">
@@ -114,7 +113,6 @@ $this->need('header.php'); ?>
                 </div>
                 </div>
             </div>
-        </div>
         </div>
 <?php endif;?>
     </main>
