@@ -59,4 +59,4 @@ Valine 评论数据是存储在Leancloud的，所以你要使用Valine 需要注
 只要浏览器不要太老...
 
 [1]:https://alone88.cn/
-[2]:https://mkm.sg
+[2]:https://mkm.st
