@@ -15,7 +15,7 @@ $this->need('header.php');
                             <div class="post-meta author-box wow bounceInRight">
                                 <div class="thw-autohr-bio-img">
                                     <div class="thw-img-border">
-                                       <?php $this->author->gravatar('60','x',null,'avatar avatar-60 photo img-fluid') ?>
+                                       <?php $this->author->gravatar('60','g',null,'avatar avatar-60 photo img-fluid') ?>
                                     </div>
                                 </div>
                                 <div class="post-meta-content">
@@ -52,7 +52,7 @@ $this->need('header.php');
                     <div class="thw-author-box author-box thw-sept wow rollIn">
                         <div class="thw-autohr-bio-img">
                             <div class="thw-img-border">
-                                 <?php $this->author->gravatar('80','x',null,'avatar avatar-80 photo img-fluid') ?>
+                                 <?php $this->author->gravatar('80','g',null,'avatar avatar-80 photo img-fluid') ?>
                             </div>
                         </div>
                         <div class="author-info">

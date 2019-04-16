@@ -45,7 +45,7 @@ $this->need('header.php');
                                                     <div class="thw-autohr-bio-img">
                                                         <div class="thw-img-border">
 
-                                                <?php $this->author->gravatar('60','x',null,'avatar avatar-60 photo img-fluid') ?>
+                                                <?php $this->author->gravatar('60','g',null,'avatar avatar-60 photo img-fluid') ?>
                                                 </div>
                                                     </div>
                                                     <div class="post-meta-content">
