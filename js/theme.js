@@ -107,6 +107,7 @@ $('a[href="#search"]').on('click', function(event) {
     $('[data-toggle="on-screen"]')[0] && $('[data-toggle="on-screen"]').onScreen({
         container: window,
         direction: 'vertical',
+
         doIn: function() {
             //alert();
         },
@@ -131,4 +132,21 @@ $('a[href="#search"]').on('click', function(event) {
 
         event.preventDefault();
     });
+
+    $(".biji-content").hide();
+    $('.openoff').css('cursor','pointer');
+    $(".openoff").click(function () {
+        var txts = $(this).parents("li");
+        if ($(this).attr('data-toggle') == "open") {
+            $(this).attr('data-toggle','close');
+            $(this).text('[关闭]');
+            txts.find(".biji-tit").hide();
+            txts.find(".biji-content").show();
+        } else {
+            $(this).attr('data-toggle','open');
+            $(this).text('[展开]');
+            txts.find(".biji-tit").show();
+            txts.find(".biji-content").hide();
+        }
+    })
  });
