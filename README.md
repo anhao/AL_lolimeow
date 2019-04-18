@@ -5,6 +5,11 @@
 Email:im#alone88.cn (#换成@)  
 Wordpress form [猫可喵][2]  
 
+##### 更新日志
+
+ - 2019.04.18 添加文章归档页
+
+
 ##### 主题演示
 
    http://typecho.alapi.cn
