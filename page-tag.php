@@ -38,6 +38,9 @@ $this->need('header.php');
                             <canvas id="tag-cloud"></canvas>
                         </div>
                     </div>
+                    <div id="comments">
+                        <?php $this->need('comments.php'); ?>
+                    </div>
                 </div>
             </div>
         </div>
