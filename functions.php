@@ -24,13 +24,13 @@ function themeConfig($form)
     $form->addInput($social_links);
     $social_script = new Typecho_Widget_Helper_Form_Element_Textarea('social_script', NULL, NULL, _t('统计代码'), _t('统计代码'));
     $form->addInput($social_script);
-    $banner_set = new Typecho_Widget_Helper_Form_Element_Select('banner_set',
+    /*$banner_set = new Typecho_Widget_Helper_Form_Element_Select('banner_set',
         array('local' => '本地',
             'nolocal' => '外链'),
         'local',
         _t('顶部banner设置,是本地图片还是外链图片'), _t('默认本地')
     );
-    $form->addInput($banner_set);
+    $form->addInput($banner_set);*/
     $valine = new Typecho_Widget_Helper_Form_Element_Select('valine', array('no' => '关闭', 'yes' => '开启'), 'no', _t('是否Valine评论,默认关闭'),
         _t("Valine 是一款快速、简洁且高效的无后端评论系统。开启Valine评论则会关闭Typecho自带的评论系统,Valine官网：<a href='https://valine.js.org/' title='Valine官网'>https://valine.js.org/</a>"));
     $form->addInput($valine);
