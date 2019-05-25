@@ -24,13 +24,13 @@ function themeConfig($form)
     $form->addInput($social_links);
     $social_script = new Typecho_Widget_Helper_Form_Element_Textarea('social_script', NULL, NULL, _t('统计代码'), _t('统计代码'));
     $form->addInput($social_script);
-   /* $bannerset = new Typecho_Widget_Helper_Form_Element_Select('bannerset',
+    $banner_set = new Typecho_Widget_Helper_Form_Element_Select('banner_set',
         array('local' => '本地',
             'nolocal' => '外链'),
         'local',
         _t('顶部banner设置,是本地图片还是外链图片'), _t('默认本地')
     );
-    $form->addInput($bannerset);*/
+    $form->addInput($banner_set);
     $valine = new Typecho_Widget_Helper_Form_Element_Select('valine', array('no' => '关闭', 'yes' => '开启'), 'no', _t('是否Valine评论,默认关闭'),
         _t("Valine 是一款快速、简洁且高效的无后端评论系统。开启Valine评论则会关闭Typecho自带的评论系统,Valine官网：<a href='https://valine.js.org/' title='Valine官网'>https://valine.js.org/</a>"));
     $form->addInput($valine);
@@ -97,13 +97,12 @@ function themeInit($archive)
 //banner 图片地址
 function al_banner()
 {
-//    $local = Helper::options()->bannerset == 'local' ? true : false;
-//    $banner_url = 'https://i.alapi.cn/acg/';
+
+    $widget = Widget_Options::widget('Widget_Options');
     $banner_no = 10;
     $temp_no = rand(1, $banner_no);
-    $banner_dir = Helper::options()->themeUrl("images/banner/banner($temp_no).jpg");
-//    $img_url = $local ? $banner_dir : $banner_url;
-    return $banner_dir;
+    $banner_url = $widget->themeUrl.'/images/banner/banner('.$temp_no.').jpg';
+    echo $banner_url;
 }
 
 //友情连接数量
