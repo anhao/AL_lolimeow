@@ -69,9 +69,6 @@
                 <?php  if($comments->children){?>
                 <ul class="children">
                     <?php $comments->threadedComments($options); ?>
-                    <?php $comments->pageNav('←', '→', 1, '...',
-                        array('wrapTag' => 'ul', 'wrapClass' => 'pagination justify-content-center',
-                            'itemTag' => 'li','currentClass'=>'active','prevClass'=>'','nextClass'=>'')); ?>
                 </ul><!-- .children -->
                 <?php }?>
             </li>
