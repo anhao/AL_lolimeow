@@ -101,7 +101,7 @@ function al_banner()
     $widget = Widget_Options::widget('Widget_Options');
     $banner_no = 10;
     $temp_no = rand(1, $banner_no);
-    $banner_url = $widget->themeUrl.'/images/banner/banner('.$temp_no.').jpg';
+    $banner_url = $widget->themeUrl . '/images/banner/banner(' . $temp_no . ').jpg';
     echo $banner_url;
 }
 
@@ -121,7 +121,8 @@ function showThumbnail($widget)
     // 当文章无图片时的默认缩略图
     $rand = rand(1, 14); // 随机 1-14 张缩略图
 
-    $random = $widget->widget('Widget_Options')->themeUrl . '/images/rand/' . $rand . '.jpg'; // 随机缩略图路径
+    $config = $widget->widget('Widget_Options');
+    $random = $config->themeUrl . '/images/rand/' . $rand . '.jpg'; // 随机缩略图路径
     //正则匹配 主题目录下的/images/的图片（以数字按顺序命名）
 
     $cai = '';
@@ -131,24 +132,26 @@ function showThumbnail($widget)
     $patternMDfoot = '/\[.*?\]:\s*(http(s)?:\/\/.*?(jpg|png))/i';
 
     if ($attach && $attach->isImage) {
-
         $ctu = $attach->url . $cai;
     } //调用第一个图片附件
-    else
-
-//下面是调用文章第一个图片
-        if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
-            $ctu = $thumbUrl[1][0] . $cai;
-        } //如果是内联式markdown格式的图片
-        else if (preg_match_all($patternMD, $widget->content, $thumbUrl)) {
-            $ctu = $thumbUrl[1][0] . $cai;
-        } //如果是脚注式markdown格式的图片
-        else if (preg_match_all($patternMDfoot, $widget->content, $thumbUrl)) {
-            $ctu = $thumbUrl[1][0] . $cai;
-        } //以上都不符合，即随机输出图片
-        else {
+    else if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
+        //下面是调用文章第一个图片
+        $ctu = $thumbUrl[1][0] . $cai;
+    } //如果是内联式markdown格式的图片
+    else if (preg_match_all($patternMD, $widget->content, $thumbUrl)) {
+        $ctu = $thumbUrl[1][0] . $cai;
+    } //如果是脚注式markdown格式的图片
+    else if (preg_match_all($patternMDfoot, $widget->content, $thumbUrl)) {
+        $ctu = $thumbUrl[1][0] . $cai;
+    } //以上都不符合，即随机输出图片
+    else {
+        $thumb = $config->default_thumb;
+        if (!empty($thumb) && !is_null($thumb)) {
+            $ctu = $thumb;
+        } else {
             $ctu = $random;
         }
+    }
     return $ctu;
 }
 
