@@ -19,7 +19,7 @@ $this->need('header.php');
 
                     <div class="card card-nav-tabs text-center">
                         <div class="card-header card-header-primary">
-                            <?php $this->options->title()?>专用图床  - SM.MS提供支持
+                            <?php $this->options->title()?>专用图床  - alapi.cn 提供支持
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">上传图片</h4>
@@ -32,7 +32,7 @@ $this->need('header.php');
                             <div id="delete"></div>
 
                             <div class="form-group form-file-upload form-file-multiple">
-                                <a href="javascript:;">
+                                <a href="javascript:">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" id="image" accept="image/*"
                                                multiple="multiple">
