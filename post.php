@@ -85,17 +85,8 @@ $this->need('header.php');
                                 <div class="card card-blog">
                                     <div class="card-header card-header-image">
                                         <a href="<?php $relatedPosts->permalink(); ?>">
-                                            <?php if (array_key_exists('thumb', unserialize($this->___fields()))): ?>
-                                                <img class="img img-raised" src="<?php echo $this->fields->thumb; ?>"
-                                                     alt="<?php $relatedPosts->title(); ?>">
-
-                                            <?php else: ?>
-                                                <?php $thumb = showThumbnail($this);
-                                                if (!empty($thumb)): ?>
-                                                    <img class="img img-raised" src="<?php echo $thumb ?>">
-                                                <?php endif; ?>
-                                            <?php endif; ?>
-
+                                            <img class="img img-raised" src="<?php echo  showThumbnail($relatedPosts);?>"
+                                                 alt="<?php $relatedPosts->title(); ?>">
                                         </a>
                                     </div>
                                     <div class="card-body">
