@@ -19,7 +19,7 @@ $this->need('header.php');
 
                     <div class="card card-nav-tabs text-center">
                         <div class="card-header card-header-primary">
-                            <?php $this->options->title()?>专用图床  - alapi.cn 提供支持
+                            <?php echo $this->options->title()?>专用图床  - alapi.cn 提供支持
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">上传图片</h4>
