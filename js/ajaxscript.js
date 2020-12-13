@@ -7,6 +7,7 @@ $('#image').change(function () {
         }
         var formData = new FormData();
         formData.append('image', f);
+        formData.append('type', 'alapi');
 
         $('#uploadinfo').html('<p class=\"card-text \">上传中...请稍等<img src=\"https://i.loli.net/2018/09/14/5b9bd17b2b43c.gif\" alt="图片上传中"></p>').fadeIn();
         $.ajax({
@@ -18,7 +19,7 @@ $('#image').change(function () {
             beforeSend: function (xhr) {
             },
             success: function (res) {
-                var imgurl = res.data.url.Ali;
+                var imgurl = res.data.url.alapi;
                 $('#uploadinfo').remove();
                 $("#showurl").css("display");
                 $('#img2').append('<img class = "card-img-bottom" src="' + imgurl + '" alt="<?php $this->options->title(); ?>专用图床" style="max-width: 300px;"/>');
