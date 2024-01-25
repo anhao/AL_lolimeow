@@ -47,10 +47,10 @@
         <div class="container">
             <a class="navbar-brand mr-lg-5" href="<?php $this->options->siteUrl(); ?>">
                 <?php if ($this->options->logoUrl): ?>
-                <img src="<?php _e($this->options->logoUrl); ?>" alt="<?php _e($this->options->title() );?>" title="<?php _e($this->options->title());?>"
+                <img src="<?php $this->options->logoUrl(); ?>" alt="<?php _e($this->options->title);?>" title="<?php _e($this->options->title());?>"
                      class="headerlogo"></a>
             <?php else: ?>
-                <span title="<?php _e($this->options->title()); ?>"><?php _e($this->options->title()); ?></span></a>
+                <span title="<?php _e($this->options->title); ?>"><?php _e($this->options->title); ?></span></a>
             <?php endif ?>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
                     aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,10 +61,10 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <?php if ($this->options->logoUrl): ?>
-                                <img src="<?php _e($this->options->logoUrl); ?>" alt="<?php _e($this->options->title() );?>" title="<?php _e($this->options->title() );?>"
+                                <img src="<?php $this->options->logoUrl(); ?>" alt="<?php _e($this->options->title);?>" title="<?php _e($this->options->title() );?>"
                                      class="headerlogo">
                             <?php else: ?>
-                                <span title="<?php _e($this->options->title()); ?>"><?php _e($this->options->title()); ?></span>
+                                <span title="<?php _e($this->options->title); ?>"><?php _e($this->options->title); ?></span>
                             <?php endif ?>
                         </div>
                         <div class="col-6 collapse-close">

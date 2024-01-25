@@ -47,7 +47,7 @@
                     Theme by <a href="https://alone88.cn"
                                 target="_blank">Alone88</a> 页面加载耗时:<?php _e(timer_stop()) ?>
                     <div style="display:none;">
-                        <?php  _e($this->options->social_script)?>
+                        <?php $this->options->social_script(); ?>
                     </div>
                 </div>
             </div>
